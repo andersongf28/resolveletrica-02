@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Banner com Imagem e Texto</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+
+        .banner {
+            position: relative;
+            width: 100%;
+            height: auto;
+            overflow: hidden;
+        }
+
+        .banner img {
+            width: 100%;
+            height: auto; 
+            object-fit: cover;
+        }
+
+        .banner-text {
+            position: static;
+            padding: 35px;
+            border-radius: 25px;
+            max-width: 100%;
+            background-color: rgba(255, 255, 255, 0.8);
+            margin-top: 20px;
+        }
+
+        .image-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+
+        .image-container img {
+            max-width: 30%;
+            width: 100%;
+            margin: 5px;
+            border-radius: 10px;
+            height: 500px;
+        }
+
+        .video-container {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-wrap: wrap;
+            margin-top: 20px;
+            
+        }
+
+        .video-container video {
+            max-width: 100%;
+            height: auto;
+            margin: 10px;
+            border-radius: 10px;
+        }
+
+        header {
+            background: #333;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        nav {
+            text-align: center;
+            margin: 10px 0;
+        }
+
+        nav a {
+            margin: 0 15px;
+            color: #333;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: auto;
+            padding: 20px;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
+            
+        }
+
+        .grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .grid-item {
+            flex: 1 1 calc(33.333% - 20px);
+            background: #ddd;
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        @media (max-width: 768px) {
+            .grid-item {
+                flex: 1 1 calc(50% - 20px);
+            }
+
+            nav a {
+                display: block;
+                margin: 10px;
+            }
+
+            .image-container img {
+                max-width: 45%;
+            }
+
+            .video-container video {
+                max-width: 90%;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .grid-item {
+                flex: 1 1 100%;
+            }
+
+            .image-container img {
+                max-width: 100%;
+            }
+
+            .video-container video {
+                max-width: 100%;
+            }
+        }
+
+        .blinking-button {
+            padding: 10px 20px;
+            font-size: 18px;
+            font-weight: bold;
+            color: white;
+            background-color: #007BFF;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            text-align: center;
+            animation: blinking 1s infinite;
+        }
+
+        @keyframes blinking {
+            0%, 100% {
+                opacity: 1;
+            }
+            50% {
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="banner">
+        <img src="src/imagens/banner da resolve com qr code.png" alt="Banner">
+        <div class="banner-text">
+            <h3>Este é um pouco do nosso trabalho, uma pequena amostra do esforço e da dedicação que investimos em cada
+                etapa dos nossos projetos. Cada detalhe foi cuidadosamente pensado para refletir a nossa paixão pelo que
+                fazemos e o nosso compromisso em entregar resultados de excelência. Desde o planejamento até a execução,
+                buscamos sempre superar as expectativas, garantindo que cada aspecto do trabalho seja feito com a máxima
+                qualidade. Estamos orgulhosos de compartilhar esse resultado, que representa não apenas o nosso
+                profissionalismo, mas também a nossa contínua busca por inovação e aperfeiçoamento.</h3>
+        </div>
+    </div>
+
+    <div class="image-container">
+        <img src="src/imagens/lustre amarelo.png" alt="lustre com a luz amarela 1">
+        <img src="src/imagens/WhatsApp Image 2024-08-14 at 12.20.11 (1).jpeg" alt="lustre com a luz cor branca2">
+        <img src="src/imagens/WhatsApp Image 2024-08-14 at 12.20.11.jpeg" alt="perfil de led 3">
+    </div>
+
+    <div class="video-container">
+        <video controls>
+            <source src="src/imagens/WhatsApp Video 2024-08-14 at 12.15.40.mp4" type="video/mp4">
+        </video>
+        <video controls>
+            <source src="src/imagens/WhatsApp Video 2024-08-14 at 12.17.45.mp4" type="video/mp4">
+        </video>
+    </div>
+
+    <header>
+        <h1>Agende uma visita do nosso técnico</h1>
+        <a href="http://wa.me/351927416732" class="blinking-button">>>>>Clique aqui<<<<<</a>
+    </header>
+
+    <nav>
+        <a href="#">resolveletrica</a>
+        <a href="#">eletricidade</a>
+        <a href="#">reparos e manutenções</a>
+        <a href="#">(351)927 416 732 </a>
+    </nav>
+
+    <div class="container">
+        <section class="grid">
+            <div class="grid-item">instalações</div>
+            <div class="grid-item">reparos</div>
+            <div class="grid-item">manutenção</div>
+        </section>
+    </div>
+</body>
+
+</html>
